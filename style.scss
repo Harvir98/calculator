@@ -6,6 +6,8 @@ $third-color: rgb(154, 154, 154);
 $fourth-color: black;
 $fifth-color: #fff;
 
+// Font
+
 * {
   padding: 0;
   margin: 0;
@@ -23,6 +25,7 @@ body {
   width: 40vw;
   height: 60vh;
   background-color: $fourth-color;
+  // font-family: $primary-font;
   border: solid 1px white;
   border-radius: 2%;
   display: grid;
@@ -37,6 +40,9 @@ body {
 
   #input {
     grid-area: a;
+    background-color: $fourth-color;
+    color: $fifth-color;
+    font-size: 18px;
   }
 
   #AC {
@@ -46,8 +52,6 @@ body {
   #number0 {
     grid-area: r;
   }
-
-
 
   &__top {
     background-color: $third-color;

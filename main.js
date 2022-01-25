@@ -11,10 +11,13 @@ const AC = document.getElementById("AC");
 const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
 const equals = document.querySelector(".calculator__equals");
-console.log(numbers)
+const percent = document.getElementById("percent");
+
+console.log(percent)
 
 let firstNumber;
 let secondNumber;
+let thirdNumber;
 let operator;
 let total = 0;
 
@@ -35,7 +38,7 @@ numbers.forEach(number => {
 // mapping through each of the symbols
 symbols.forEach(symbol => {
   symbol.addEventListener("click", (event) => {
-    // 
+
     firstNumber = input.innerHTML;
     operator = symbol.innerHTML;
     input.innerHTML = operator;
@@ -65,6 +68,11 @@ equals.addEventListener("click", (event) => {
 
   input.innerHTML = total
 });
+
+percent.addEventListener("click", (event) => {
+  input.innerHTML = Number(input.innerHTML) / 100;
+});
+
 
 // % Button - 
 

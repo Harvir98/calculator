@@ -12,18 +12,15 @@ const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
 const equals = document.querySelector(".calculator__equals");
 const percent = document.getElementById("percent");
+const plusOrMinus = document.getElementById("plusOrMinus");
 
-console.log(percent)
+console.log(plusOrMinus)
 
 let firstNumber;
 let secondNumber;
 let thirdNumber;
 let operator;
 let total = 0;
-
-AC.addEventListener("click", (event) => {
-  input.innerHTML = "";
-});
 
 numbers.forEach(number => {
   number.addEventListener("click", (event) => {
@@ -65,14 +62,20 @@ equals.addEventListener("click", (event) => {
   } else if (operator == "x") {
     total = Number(firstNumber) * Number(secondNumber);
   }
+    input.innerHTML = total
+});
 
-  input.innerHTML = total
+AC.addEventListener("click", (event) => {
+  input.innerHTML = "";
 });
 
 percent.addEventListener("click", (event) => {
   input.innerHTML = Number(input.innerHTML) / 100;
 });
 
+plusOrMinus.addEventListener("click", (event) => {
+  input.innerHTML = - Number(input.innerHTML); 
+});
 
 // % Button - 
 

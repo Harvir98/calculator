@@ -43,13 +43,14 @@ body {
     background-color: $fourth-color;
     color: $fifth-color;
     font-size: 18px;
+    height: 30px;
   }
 
   #AC {
     grid-area: b;
   }
 
-  #number0 {
+  #zero {
     grid-area: r;
   }
 

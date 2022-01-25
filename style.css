@@ -37,6 +37,7 @@ body {
   background-color: black;
   color: #fff;
   font-size: 18px;
+  height: 30px;
 }
 
 .calculator #AC {
@@ -45,7 +46,7 @@ body {
   grid-area: b;
 }
 
-.calculator #number0 {
+.calculator #zero {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;

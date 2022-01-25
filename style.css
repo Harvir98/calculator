@@ -53,6 +53,13 @@ body {
   grid-area: r;
 }
 
+.calculator #equals {
+  background-color: orange;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
 .calculator__top {
   background-color: #9a9a9a;
   border-radius: 50%;

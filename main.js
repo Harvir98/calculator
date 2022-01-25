@@ -1,10 +1,12 @@
 // add event listener to button to change p tag to display number
 // if statements, if you add two values return total 
 
-// Variable for the in
+// Variables
+
+// Variable for the display screen
 const input = document.getElementById("input");
 
-// const AC = document.getElementById("AC");
+const AC = document.getElementById("AC");
 
 const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
@@ -14,6 +16,10 @@ let firstNumber;
 let secondNumber;
 let operator;
 let total = 0;
+
+AC.addEventListener("click", (event) => {
+  input.innerHTML = "";
+});
 
 numbers.forEach(number => {
   number.addEventListener("click", (event) => {
@@ -44,9 +50,9 @@ equals.addEventListener("click", (event) => {
   } else if (operator == "-") {
     total = Number(firstNumber) - Number(secondNumber);
   } else if (operator == "÷") {
-    total = Number(firstNumber) * Number(secondNumber);
-  } else if (operator == "x") {
     total = Number(firstNumber) / Number(secondNumber);
+  } else if (operator == "x") {
+    total = Number(firstNumber) * Number(secondNumber);
   }
 
   input.innerHTML = total

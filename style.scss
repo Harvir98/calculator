@@ -54,6 +54,13 @@ body {
     grid-area: r;
   }
 
+  #equals {
+    background-color: $second-color;
+    color: $fifth-color;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
   &__top {
     background-color: $third-color;
     border-radius: 50%;
@@ -74,4 +81,6 @@ body {
     border-radius: 50%;
     font-size: 20px;
   }
+
+  
 }

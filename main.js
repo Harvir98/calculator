@@ -36,15 +36,14 @@ symbols.forEach(symbol => {
     firstNumber = input.innerHTML;
     operator = symbol.innerHTML;
     input.innerHTML = symbol.innerHTML;
+    // operator.innerHTML = "";
   });
 })
 
 equals.addEventListener("click", (event) => {
   secondNumber = input.innerHTML;
   input.innerHTML = "";
-  // input.innerHTML = (Number(firstNumber) + Number(secondNumber) )
-  // let total  = 4;
-
+  
   if (operator == "+") {
     total = Number(firstNumber) + Number(secondNumber);
   } else if (operator == "-") {
@@ -56,8 +55,9 @@ equals.addEventListener("click", (event) => {
   }
 
   input.innerHTML = total
-
 });
+
+// % Button - 
 
 // Using Number() Number() can be used to convert JavaScript variables to numbers. ...
 

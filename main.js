@@ -5,71 +5,80 @@
 // const nine = document.getElementById("nine");
 // const eight = document.getElementById("eight");
 // const seven = document.getElementById("seven");
-// const input = document.getElementById("input");
+const input = document.getElementById("input");
 // const buttons = document.getElementsByClassName("calculator__button");
 // const AC = document.getElementById("AC");
 // const minus = document.getElementById("minus");
+const symbols = document.querySelectorAll(".calculator__symbol");
+const numbers = document.querySelectorAll(".calculator__number");
+const equals = document.querySelector(".calculator__equals");
+console.log(numbers)
+let firstNumber;
+let secondNumber;
+let operator;
+let total = 0;
 
-// add event listener to button to change p tag to display number
-nine.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (9)
+numbers.forEach(number => {
+  number.addEventListener("click", (event) => {
+    // if (input.innerHTML === "+") {
+    //   operator = "+"
+    //   input.innerHTML = "" 
+    // }
+    input.innerHTML = number.innerHTML
+  });
+})
+
+symbols.forEach(symbol => {
+  symbol.addEventListener("click", (event) => {
+    firstNumber = input.innerHTML;
+    operator = symbol.innerHTML;
+    input.innerHTML = symbol.innerHTML;
+  });
+})
+
+equals.addEventListener("click", (event) => {
+  secondNumber = input.innerHTML;
+  input.innerHTML = "";
+  // input.innerHTML = (Number(firstNumber) + Number(secondNumber) )
+  // let total  = 4;
+
+  if (operator == "+") {
+    total = Number(firstNumber) + Number(secondNumber);
+  } else if (operator == "-") {
+    total = Number(firstNumber) - Number(secondNumber);
+  } else if (operator == "÷") {
+    total = Number(firstNumber) * Number(secondNumber);
+  } else if (operator == "x") {
+    total = Number(firstNumber) / Number(secondNumber);
+  }
+
+  input.innerHTML = total
+
 });
 
-eight.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (8)
-});
+// Using Number() Number() can be used to convert JavaScript variables to numbers. ...
 
-seven.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (7)
-});
 
-six.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (6)
-});
 
-five.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (5)
-});
 
-four.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (4)
-});
+// // symbolsz.forEach()
 
-three.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (3)
-});
+// // .addEventListener("click", (event) => {
+// //   // const button = event.target
+// //   alert("button clicked");
 
-two.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (2)
-});
+// // });
+// // Add event listener to a button so when i click it, it performs a function
+// plus.addEventListener("click", (event) => {
 
-one.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (1)
-});
+//   for (let i = 0; i < symbolsz.length; i++) {
+//     symbolsz[i]
+//   } 
+//   alert("hello")
 
-zero.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (0)
-});
+// });
 
-AC.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML = ("")
-});
-
-decimal.addEventListener("click", (event) => {
-  event.preventDefault()
-  input.innerHTML += (".")
-});
+// // [...boxes].indexOf(box)
 
 
 
@@ -78,10 +87,15 @@ decimal.addEventListener("click", (event) => {
 
 
 
-minus.addEventListener("click", (event) => {
-  event.preventDefault()
+
+
+
+
+
+// minus.addEventListener("click", (event) => {
+//   event.preventDefault()
  
-});
+// });
 
 
 

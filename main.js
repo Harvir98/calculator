@@ -1,14 +1,11 @@
 // add event listener to button to change p tag to display number
 // if statements, if you add two values return total 
 
-
-// const nine = document.getElementById("nine");
-// const eight = document.getElementById("eight");
-// const seven = document.getElementById("seven");
+// Variable for the in
 const input = document.getElementById("input");
-// const buttons = document.getElementsByClassName("calculator__button");
+
 // const AC = document.getElementById("AC");
-// const minus = document.getElementById("minus");
+
 const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
 const equals = document.querySelector(".calculator__equals");

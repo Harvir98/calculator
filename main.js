@@ -12,6 +12,7 @@ const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
 const equals = document.querySelector(".calculator__equals");
 console.log(numbers)
+
 let firstNumber;
 let secondNumber;
 let operator;
@@ -27,22 +28,30 @@ numbers.forEach(number => {
     //   operator = "+"
     //   input.innerHTML = "" 
     // }
-    input.innerHTML = number.innerHTML
+    input.innerHTML = number.innerHTML;
   });
 })
 
+// mapping through each of the symbols
 symbols.forEach(symbol => {
   symbol.addEventListener("click", (event) => {
+    // 
     firstNumber = input.innerHTML;
     operator = symbol.innerHTML;
-    input.innerHTML = symbol.innerHTML;
+    input.innerHTML = operator;
+    // input.innerHTML = symbol.innerHTML;
     // operator.innerHTML = "";
+    
   });
 })
 
 equals.addEventListener("click", (event) => {
+
+  // storing second number in  secondNumber variable 
   secondNumber = input.innerHTML;
-  input.innerHTML = "";
+  // input.innerHTML = "";
+  // why this step here
+  // input.innerHTML = "";
   
   if (operator == "+") {
     total = Number(firstNumber) + Number(secondNumber);

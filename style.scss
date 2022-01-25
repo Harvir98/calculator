@@ -22,6 +22,7 @@ body {
 
 .calculator {
   margin: 10vw;
+  padding: 15px;
   width: 40vw;
   height: 60vh;
   background-color: $fourth-color;
@@ -63,6 +64,10 @@ body {
     color: $fifth-color;
     border-radius: 50%;
     font-size: 20px;
+  }
+
+  #percent {
+    background-color: $third-color;
   }
 
   &__top {

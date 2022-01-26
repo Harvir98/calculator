@@ -15,3 +15,7 @@ Hi and welcome to my first major project involving JavaScript. It involved build
 // Within the forEach method, I created an if statement, so if the input.innerHTML (display screen) displayed one of the four symbols created then it would display an empty screen by using empty string. 
 
 
+<!-- Symbols -->
+
+// Similar to the numbers variable I used a forEach method to iterate through each symbol. I assigned the firstNumber variable to the first input in the display screen. 
+

@@ -27,7 +27,6 @@ body {
   height: 60vh;
   background-color: $fourth-color;
   // font-family: $primary-font;
-  border: solid 1px white;
   border-radius: 2%;
   display: grid;
   gap: 10px;
@@ -44,7 +43,7 @@ body {
     grid-area: a;
     background-color: $fourth-color;
     color: $fifth-color;
-    font-size: 25px;
+    font-size: 28px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -71,20 +70,26 @@ body {
     background-color: $third-color;
     border-radius: 50%;
     color: $fifth-color;
-    font-size: 20px;
   }
 
   &__symbol {
     background-color: $second-color;
     color: $fifth-color;
     border-radius: 50%;
-    font-size: 20px;
   }
 
   &__number {
     background-color: $first-color;
     color: $fifth-color;
     border-radius: 50%;
-    font-size: 20px;
   } 
+
+  &__button {
+    font-size: 23px;
+    border: none;
+  }
+
+  &__button:hover {
+    transform: scale(1.14);
+  }
 }

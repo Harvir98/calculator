@@ -7,6 +7,8 @@ const equals = document.querySelector(".calculator__equals");
 const percent = document.getElementById("percent");
 const plusOrMinus = document.getElementById("plusOrMinus");
 
+console.log(numbers)
+
 let firstNumber;
 let secondNumber;
 let operator;

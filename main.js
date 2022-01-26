@@ -14,8 +14,6 @@ const equals = document.querySelector(".calculator__equals");
 const percent = document.getElementById("percent");
 const plusOrMinus = document.getElementById("plusOrMinus");
 
-console.log(plusOrMinus)
-
 let firstNumber;
 let secondNumber;
 let thirdNumber;
@@ -24,11 +22,11 @@ let total = 0;
 
 numbers.forEach(number => {
   number.addEventListener("click", (event) => {
-    // if (input.innerHTML === "+") {
-    //   operator = "+"
-    //   input.innerHTML = "" 
-    // }
-    input.innerHTML = number.innerHTML;
+    if (input.innerHTML === "+" || input.innerHTML === "-" ||input.innerHTML === "÷" ||input.innerHTML === "x") {
+      // operator = "+" 
+      input.innerHTML = "" 
+    }
+    input.innerHTML += number.innerHTML;
   });
 })
 

@@ -8,6 +8,7 @@ const input = document.getElementById("input");
 
 const AC = document.getElementById("AC");
 
+const buttons= document.querySelectorAll(".calculator__button");
 const symbols = document.querySelectorAll(".calculator__symbol");
 const numbers = document.querySelectorAll(".calculator__number");
 const equals = document.querySelector(".calculator__equals");
@@ -16,9 +17,20 @@ const plusOrMinus = document.getElementById("plusOrMinus");
 
 let firstNumber;
 let secondNumber;
-let thirdNumber;
+
 let operator;
 let total = 0;
+
+// Styling
+
+
+
+
+// buttons.addEventListener("click", (event) => {
+//   buttons.style.color = "black";
+// })
+ 
+
 
 numbers.forEach(number => {
   number.addEventListener("click", (event) => {
@@ -74,6 +86,9 @@ percent.addEventListener("click", (event) => {
 plusOrMinus.addEventListener("click", (event) => {
   input.innerHTML = - Number(input.innerHTML); 
 });
+
+
+document.querySelectorAll(".calculator__button").style.backgroundColor = "#3533";
 
 // % Button - 
 

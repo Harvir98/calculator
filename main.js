@@ -32,14 +32,25 @@ numbers.forEach((number) => {
 // mapping through each of the symbols
 symbols.forEach((symbol) => {
   symbol.addEventListener("click", (event) => {
-    firstNumber = input.innerHTML;
-    operator = symbol.innerHTML;
-    input.innerHTML = operator;
+    if (input.innerHTML === "+" ||
+    input.innerHTML === "-" ||
+    input.innerHTML === "÷" ||
+    input.innerHTML === "x" ||
+    input.innerHTML === ""
+    ){
+      return;
+    } else {
+      firstNumber = input.innerHTML
+      operator = symbol.innerHTML
+      input.innerHTML = operator
+    }
+    // firstNumber = input.innerHTML;
+    // operator = symbol.innerHTML;
+    // input.innerHTML = operator;
   });
 });
 
 equals.addEventListener("click", (event) => {
-  // storing second number in  secondNumber variable
   secondNumber = input.innerHTML;
 
   if (operator == "+") {

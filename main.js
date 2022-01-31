@@ -7,13 +7,10 @@ const equals = document.querySelector(".calculator__equals");
 const percent = document.getElementById("percent");
 const plusOrMinus = document.getElementById("plusOrMinus");
 
-console.log(numbers)
-
 let firstNumber;
 let secondNumber;
 let operator;
 let total = 0;
-let colorButton;
 
 numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
@@ -29,24 +26,21 @@ numbers.forEach((number) => {
   });
 });
 
-// mapping through each of the symbols
 symbols.forEach((symbol) => {
   symbol.addEventListener("click", (event) => {
-    if (input.innerHTML === "+" ||
-    input.innerHTML === "-" ||
-    input.innerHTML === "÷" ||
-    input.innerHTML === "x" ||
-    input.innerHTML === ""
-    ){
+    if (
+      input.innerHTML === "+" ||
+      input.innerHTML === "-" ||
+      input.innerHTML === "÷" ||
+      input.innerHTML === "x" ||
+      input.innerHTML === ""
+    ) {
       return;
     } else {
-      firstNumber = input.innerHTML
-      operator = symbol.innerHTML
-      input.innerHTML = operator
+      firstNumber = input.innerHTML;
+      operator = symbol.innerHTML;
+      input.innerHTML = operator;
     }
-    // firstNumber = input.innerHTML;
-    // operator = symbol.innerHTML;
-    // input.innerHTML = operator;
   });
 });
 
@@ -77,8 +71,6 @@ plusOrMinus.addEventListener("click", (event) => {
   input.innerHTML = - Number(input.innerHTML);
 });
 
-
-
 // Styling
 
 // buttons.addEventListener("click", (event) => {
@@ -91,7 +83,7 @@ plusOrMinus.addEventListener("click", (event) => {
 //   // });
 //   if (
 //     button.style.backgroundColor == "red" ||
-  
+
 //    ) {
 //     input.innerHTML = "";
 
